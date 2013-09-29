@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+1.14
+
+Solve the reccurence:
+
+\begin{equation}
+A_{N} = 1 + \frac{2}{N}\sum_{1\leq j \leq N}A_{j-1}, N > 0 \nonumber
+\end{equation}
+
+First let's multiply both parts by N:
+
+\begin{equation}
+NA_{N} = N + 2\sum_{1 \leq j \leq N}A_{j-1} \nonumber
+\end{equation}
+
+Then let's write out the same equation for ${A_{N-1}}$:
+
+\begin{equation}
+(N-1)A_{N-1} = (N - 1) + 2\sum_{1 \leq j \leq N-1}A_{j-1} \nonumber
+\end{equation}
+
+Now let's subtract one equation from another:
+
+\begin{equation}
+NA_{N} - (N-1)A_{N-1} = N - (N-1) + 2\sum_{1 \leq j \leq N}A_{j-1} - 2\sum_{1 \leq j \leq N-1}A_{j-1} \nonumber
+\end{equation}
+
+And simplify:
+
+\begin{equation}
+NA_{N} - (N-1)A_{N-1} = 1 + 2A_{N-1} \nonumber
+\end{equation}
+
+\begin{equation}
+NA_{N} = 1 + (N+1)A_{N-1} \nonumber
+\end{equation}
+
+Divide both parts by ${N(N+1)}$:
+
+\begin{equation}
+\frac{A_{N}}{N+1} = \frac{1}{N(N+1)} + \frac{A_{N-1}}{N} \nonumber
+\end{equation}
+
+We can telecope this one, but we need to know the last term. Let's take a look at ${N=1}$ equation:
+
+\begin{equation}
+\frac{A_{1}}{2} = \frac{1}{2} + \frac{A_{0}}{1} \nonumber
+\end{equation}
+
+So let's do the telescoping:
+
+\begin{equation}
+\frac{A_{N}}{N+1} = \frac{1}{N(N+1)} + \frac{1}{(N-1)N} + \frac{1}{(N-2)(N-1)} + ... + \frac{1}{2 \times 3} + \frac{1}{2 \times 1} + A_{0} \nonumber
+\end{equation}
+
+And simplify the sum:
+
+\begin{equation}
+\frac{A_{N}}{N+1} = \sum_{1 \leq k \leq N}\frac{1}{k(k+1)} + A_{0} \nonumber
+\end{equation}
+
+And the sum is obviously equal to ${\frac{n}{n+1}}$:
+
+\begin{equation}
+\frac{A_{N}}{N+1} = A_{0} + \frac{N}{N+1} \nonumber
+\end{equation}
+
+\begin{equation}
+A_{N} = NA_{0} + A_{0} + N \nonumber
+\end{equation}
+
+\end{document}
