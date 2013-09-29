@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int computeQuad(int size)
+void computeQuad(int size)
 {
     float *A = (float*)malloc(sizeof(float) * (size+1));
     float temp;
@@ -20,9 +20,11 @@ int computeQuad(int size)
 
         printf("A[%d] = %f\n", N, A[N]);
     }
+
+    free(A);
 }
 
-int computeLinear(int size)
+void computeLinear(int size)
 {
     int N;
     float temp;
@@ -35,9 +37,11 @@ int computeLinear(int size)
 
         printf("A[%d] = %f\n", N, A[N]);
     }
+
+    free(A);
 }
 
-int computeSimplified(int size)
+void computeSimplified(int size)
 {
     int N;
     float A0 = 3;
