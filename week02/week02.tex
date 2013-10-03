@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+2.11
+
+Solve the reccurence:
+
+\begin{equation}
+na_{n} = (n - 2)a_{n - 1} + 2  \qquad \text{for ${n > 1}$ with ${a_{1} = 1}$}. \nonumber
+\end{equation}
+
+Solution. Use the summation factor ${n - 1}$:
+
+\begin{equation}
+\begin{split}
+n(n - 1)a_{n}   & = (n - 1)(n - 2)a_{n - 1} + 2(n - 1) \\
+		& = (n - 2)(n - 3)a_{n-2} + 2(n - 2) + 2(n - 1) \\
+		& = 2(1 + 2 + \dots + n - 1) \\
+		& = n(n-1) \\
+          a_{n} & = 1 \qquad \text{for ${n \geq 1}$}\nonumber
+\end{split}
+\end{equation}
+
+Easier solution. Compute ${a_{2} = 1}$, think for a moment, and then prove
+by induction that ${a_{n} = 1}$ for all ${n \geq 1}$.
+
+\bigskip
+2.12.
+
+Solve the reccurence
+
+\begin{equation}
+a_{n} = 2a_{n-1} + 1 \qquad \text{for ${n > 1}$ with ${a_{1} = 1}$.} \nonumber
+\end{equation}
+
+\begin{equation}
+\frac{a_{n}}{2^n} = \frac{a_{n-1}}{2^{n-1}} + \frac{1}{2^n} \nonumber
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\frac{a_{n}}{2^n} & = \frac{1}{2^n} + \frac{1}{2^{n-1}} + \dots + \frac{1}{2} + 1 \\
+                  & = \sum_{0 \leq i \leq n}\frac{1}{2^i} = \frac{2^{n+1} - 1}{2^n}\nonumber
+\end{split}
+\end{equation}
+
+
+\begin{equation}
+a^n = 2^n - 1 \nonumber
+\end{equation}
+
+\bigskip
+
+2.13
+
+Solve the reccurence
+
+\begin{equation}
+a_{n} = \frac{n}{n + 1}a_{n-1} + 1 \qquad \text{for ${n > 0}$ with ${a_{0} = 1}$} \nonumber
+\end{equation}
+
+\begin{equation}
+\begin{split}
+(n + 1)a_{n} & = 1 + n + na_{n - 1} \\
+	     & = 1 + n + (n - 1) + na_{n - 2} \\
+	     & = 1 + n + (n - 1) + \dots + 1 \\
+	     & = 1 + \frac{n(n + 1)}{2} \nonumber
+\end{split}
+\end{equation}
+
+\begin{equation}
+	a_{n} = n/2 + 1 \nonumber
+\end{equation}
+
+
+\bigskip
+
+2.15
+Solve the reccurence
+
+\begin{equation}
+na_{n} = (n + 1)a_{n - 1} + 2n \qquad \text{for ${n > 0}$ with ${a_{0} = 0}$.} \nonumber
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\frac{a_{n}}{n + 1} & = \frac{a_{n - 1}}{n} + \frac{2}{n + 1} = \frac{a_{n - 2}}{n - 1} + \frac{2}{n} + \frac{2}{n + 1} \\
+	= 2\sum_{1 \leq i \leq n + 1}\frac{1}{i} = 2H_{n + 1} \nonumber
+\end{split}
+\end{equation}
+
+
+\begin{equation}
+a_{n} = 2(n + 1)H_{n + 1} \nonumber
+\end{equation}
+
+\end{document}
