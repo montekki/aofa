@@ -64,14 +64,14 @@ a_{n} = \frac{n}{n + 1}a_{n-1} + 1 \qquad \text{for ${n > 0}$ with ${a_{0} = 1}$
 \begin{equation}
 \begin{split}
 (n + 1)a_{n} & = 1 + n + na_{n - 1} \\
-	     & = 1 + n + (n - 1) + na_{n - 2} \\
-	     & = 1 + n + (n - 1) + \dots + 1 \\
-	     & = 1 + \frac{n(n + 1)}{2} \nonumber
+	     & = 1 + n + 1 + (n - 1) + na_{n - 2} \\
+	     & = 1 + n + n + (n - 1) + \dots + 1 \\
+	     & = \frac{(n + 1)(n + 2)}{2} \nonumber
 \end{split}
 \end{equation}
 
 \begin{equation}
-	a_{n} = n/2 + 1 \nonumber
+	a_{n} = (n + 2)/2 \nonumber
 \end{equation}
 
 
@@ -87,13 +87,13 @@ na_{n} = (n + 1)a_{n - 1} + 2n \qquad \text{for ${n > 0}$ with ${a_{0} = 0}$.} \
 \begin{equation}
 \begin{split}
 \frac{a_{n}}{n + 1} & = \frac{a_{n - 1}}{n} + \frac{2}{n + 1} = \frac{a_{n - 2}}{n - 1} + \frac{2}{n} + \frac{2}{n + 1} \\
-	= 2\sum_{1 \leq i \leq n + 1}\frac{1}{i} = 2H_{n + 1} \nonumber
+	= 2(\sum_{1 \leq i \leq n + 1}\frac{1}{i} - 1) = 2(H_{n + 1} - 1) \nonumber
 \end{split}
 \end{equation}
 
 
 \begin{equation}
-a_{n} = 2(n + 1)H_{n + 1} \nonumber
+a_{n} = 2(n + 1)(H_{n + 1} - 1) \nonumber
 \end{equation}
 
 \end{document}
