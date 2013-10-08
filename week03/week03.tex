@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+
+3.1
+
+Find the OGFs for each of the following sequences:
+
+\begin{equation}
+\{ 2^{k+1}\}_{k \geq 0}, \{k2^{k+1} \}_{k \geq 0}, \{kH_{k}\}_{k \geq 1}, \{k^3\}_{k \geq 2}. \nonumber
+\end{equation}
+
+
+1)
+
+\begin{equation}
+A_{1}(z) = \sum_{k \geq 0}2^{k+1}z^k = 2\sum_{k \geq 0}2^kz^k = \frac{2}{1-2z} \nonumber
+\end{equation}
+
+2)
+
+\begin{equation}
+A_{2}(z) = \sum_{k \geq 0}k2^{k+1}z^k  = \sum_{k \geq 0}(k+1)2^{k+1}z^k - \sum_{k \geq 0}2^{k+1}z^k \nonumber
+\end{equation}
+
+\begin{equation}
+A_{2.1}(z) = \sum_{k \geq 0}(k + 1)2^{k+1}z^k \nonumber
+\end{equation}
+
+\begin{equation}
+\int_0^z A_{2.1}(t) = \sum_{k \geq 1}\frac{k2^k}{k}z^k = \sum_{k \geq 1} 2^kz^k = \frac{1}{1-2z} - 1\nonumber
+\end{equation}
+
+\begin{equation}
+A_{2.1}(z) = \frac{2}{(1-2z)^2} \nonumber
+\end{equation}
+
+\begin{equation}
+A_{2}(z) = \frac{4z}{(1 - 2z)^2} \nonumber
+\end{equation}
+
+3)
+
+\begin{equation}
+A_{3}(z) = \sum_{k \geq 1} kH_kz^k =  \dots \nonumber
+\end{equation}
+
+4)
+
+\begin{equation}
+A_{4}(z) = \sum_{k \geq 2}{k^3z^k} = \dots \nonumber
+\end{equation}
+
+3.2
+
+Find ${[z^N]}$ for each of the following OGFs:
+
+\begin{equation}
+\frac{1}{(1 - 3z)^4}, (1 - z)^2ln\frac{1}{1 - z}, \frac{1}{(1 - 2z^2)^2} \nonumber
+\end{equation}
+
+1)
+
+\begin{equation}
+    \frac{1}{(1-3z)^2} = \sum_{N \geq 0}3^Nz^N \sum_{N \geq 0}3^Nz^N = \sum_{N \geq 0} \bigg( \sum_{0 \leq k \leq N}3^k3^{N-k} \bigg) z^N = \sum_{N \geq 0}N3^NZ^N \nonumber
+\end{equation}
+
+\begin{equation}
+\begin{split}
+    \bigg(\sum_{N \geq 0}N3^Nz^N\bigg)\bigg(\sum_{N \geq 0}N3^Nz^N\bigg) = \sum_{N \geq 0} \bigg( \sum_{0 \leq k \ leq N}k3^k(N-k)3^{N-k} \bigg)z^N =\\
+    \sum_{N \geq 0} \bigg( \sum_{0 \leq k \leq N}k(N - k) \bigg)3^Nz^N = \sum_{N \geq 0} \frac{1}{6}(N-1)N(N+1)3^Nz^N \nonumber
+\end{split}
+\end{equation}
+
+3.4
+
+Prove that
+
+\begin{equation}
+\sum_{1 \leq k \leq N} H_k = (N + 1)(H_{N + 1} - 1) \nonumber
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\sum_{1 \leq k \leq N} H_k & = \underbrace{1 + \dots + 1}_{N} + \underbrace{\frac{1}{2} + \dots + \frac{1}{2}}_{N - 1} + \dots + \underbrace{\frac{1}{N-1} + \frac{1}{N-1}} + \frac{1}{N} \\
+                           & = \sum_{1 \leq i \leq N}\frac{1}{i}(N - i + 1) = \sum_{1 \leq i \leq N}\frac{N+1}{i} - \sum{1 \leq i \leq N}1\\
+                           & = (N + 1)H_N - N = (N + 1)H_N - \frac{(N + 1)N}{N + 1} = (N + 1)(H_N - \frac{N+1}{N+1} + \frac{1}{N+1})\\
+                           & = (N + 1)(H_{N+1} - 1)\nonumber
+\end{split}
+\end{equation}
+
+\end{document}
