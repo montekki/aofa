@@ -185,4 +185,55 @@ A_3(z) = \sum_{k \geq 2} k^3 \frac{z^k}{k!} \nonumber
 A_3(z) = z^2e^z(z + 2) \nonumber
 \end{equation}
 
+3.16
+
+Use generating functions to solve the following recurrences:
+
+\begin{equation}
+\begin{aligned}
+& a_n = -a_{n - 1} + 6a_{n - 2} \qquad \text{ for ${n > 1}$ with ${a_0 = 0}$ and ${a_1 = 1}$;} \\
+& a_n = 11a_{n - 2} + 6a_{n - 3} \qquad \text{ for ${n > 2}$ with ${a_0 = 0}$ and ${a_1 = a_2 = 1}$;} \\
+& a_n = 3a_{n - 1} - 4a_{n - 2} \qquad \text{ for ${n > 1}$ with ${a_0 = 0}$ and ${a_1 = 1}$;} \\
+& a_n = a_{n - 1} - a_{n - 2} \qquad \text{ for ${n > 1}$ with ${a_0 = 0}$ and ${a_1 = 1}$} \nonumber
+\end{aligned}
+\end{equation}
+
+1)
+
+\begin{equation}
+\begin{aligned}
+a_nz^n & = -a_{n - 1}z^n + 6a_{n - 2}z^n + \delta_1z^n \\
+\sum_{n \geq 0} a_nz^n & = -\sum_{n \geq 0}a_{n-1}z^n + 6\sum_{n \geq 0}a_{n - 2}z^n + \sum_{n \geq 0}z\\
+\sum_{n \geq 0} a_nz^n & = -z \sum_{n \geq 0}a_{n-1}z^{n-1} + 6z^2\sum_{n \geq 0}a_{n-2}z^{n-2} + \sum_{n \geq 0}z \\
+a(z) & = -za(z) + 6z^2a(z) + z \\
+a(z) & = \frac{z}{1 + z - 6z^2} = \frac{z}{(1 - (-3)z)(1 - 2z)} \\
+a(z) & = \frac{1}{5}\left(\frac{1}{1 - 2z} - \frac{1}{1 - (-3)z} \right) \\
+a_n & = \frac{1}{5}\left(({2^n} - (-3)^n\right) \nonumber
+\end{aligned}
+\end{equation}
+
+2)
+
+\begin{equation}
+\begin{aligned}
+a_n & = 11a_{n - 2} + 6a_{n - 3} + \delta_1 + \delta_2 \\
+\sum_{n \geq 0} a_nz^n & = 11z^2\sum_{n \geq 0}a_{n - 2}z^{n - 2} + 6z^3\sum_{n \geq 0} a_{n - 3}z^{n - 3} + z + z^2 \\
+a(z) & = 11z^2a(z) + 6z^3a(z) + z + z^2 \\
+a(z) & = \frac{z + z^2}{1 - 11z^2 - 6z^3} \\
+\nonumber
+\end{aligned}
+\end{equation}
+
+3)
+
+\begin{equation}
+\begin{aligned}
+a_n & = 3a_{n - 1} - 4a_{n - 2} \qquad \text{for ${n > 1}$ with ${a_0 = 0}$ and ${a_1 = 1}$} \\
+g(z) & = 1 - 3z + 4z^2 \\
+f(z) & = z \\
+a(z) & = \frac{z}{1 - 3z + 4z^2} \\
+\nonumber
+\end{aligned}
+\end{equation}
+
 \end{document}
