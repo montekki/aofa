@@ -54,4 +54,23 @@ C & = 1\frac{(-2)^21}{16 - 24/2} = \frac{4}{4} = 1 \\
 \end{split}
 \]
 
+4.15
+
+Use theorem 4.1 to find an asymptotic solution to the reccurence:
+
+\[
+a_n = 2a_{n - 2} - a_{n - 4} \qquad \text{for $n > 4$ with $a_0 = a_1 = 0$
+    and $a_2 = a_3 = 1$}
+\]
+
+\[
+\begin{split}
+g(z) & = 1 - 2z^2 + z^4 = (1 - z^2)^2 \\
+f(z) & = (1 - 2z^2 + z^4)(z^2 + z^3)(mod z^4) = (z^2) \\
+a(z) & = \frac{(z^2)}{(1 - z^2)^2}\\
+& \text{Here $\beta = 1$, $\nu = 2, g''(1) = 8$ and $f(1) = 1$ so Theorem 4.1 tells that} \\
+a_n & \sim \frac{1}{4}n
+\end{split}
+\]
+
 \end{document}
