@@ -32,4 +32,26 @@ Show that
 \end{split}
 \end{equation}
 
+4.14
+
+Use theorem 4.1 to find an asymptotic solution to the recurrence:
+
+\[
+a_n = 5a_{n - 1} - 8a_{n - 2} + 4a_{n - 3} \qquad \text{for $n > 2$ with
+    $a_0 = 1$, $a_1 = 2$ and $a_2 = 4$} \nonumber
+\]
+
+\[
+\begin{split}
+g(z) & = 1 - 5z + 8z^2 - 4z^3 = (z - 1)(-4z^2 + 4z - 1) = (1 - z)(1 - 2z)^2 \\
+f(z) & = (1 + 2z + 4z^2)(1 - 5z + 8z^2 - 4z^3)(mod\ z^3) \\
+     & = (1 - 5z + 8z^2 + 2z - 10z^2 + 4z^2) = (1 - 3z + 2z^2)
+     = 2(z - \frac{1}{2})(z - 1) \\
+     & = (2z - 1)(z - 1) \\
+a(z) & = \frac{1}{1 - 2z} \\
+C & = 1\frac{(-2)^21}{16 - 24/2} = \frac{4}{4} = 1 \\
+[z^n]\frac{f(z)}{g(z)} & \sim 2^nn
+\end{split}
+\]
+
 \end{document}
