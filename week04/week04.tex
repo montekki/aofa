@@ -93,4 +93,22 @@ a_n & \sim 3\frac{(-1)^3}{-6}n^2 = \frac{1}{2}n^2
 \end{split}
 \]
 
+4.21
+
+Expand $ln(1 - x + x^2)$ as $x \rightarrow 0$, to within $\mathcal{O}(x^4)$.
+
+Substitute $(x^2 - x)$ with $y$. $y \rightarrow 0$ as $x \rightarrow 0$.
+
+\[
+\begin{split}
+ln(1 + y) & = y - \frac{y^2}{2} + \frac{y^3}{3} + \mathcal{O}(y^4) \\
+ln(1 + x^2 - x) & = x^2 - x - \frac{(x^2 - x)^2}{2} + \frac{(x^2 - x)^3}{3} +
+    \mathcal{O}((x^2 - x)^4) \\
+    & = -x + x^2 - \frac{x^4}{2} + x^3 - \frac{x^2}{2} + \frac{(x^2 - x)^3}{3} +
+    \mathcal{O}(x^4) \\
+    & = -x + \frac{x^2}{2} + x^3 - \frac{x^3}{3} + \mathcal{O}(x^4) \\
+    & = -x + \frac{x^2}{2} + \frac{2x^3}{3} + \mathcal{O}(x^4)
+\end{split}
+\]
+
 \end{document}
